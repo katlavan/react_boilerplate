@@ -14,9 +14,9 @@ class App extends Component {
         fetch('https://api.github.com/users/donfeho')
           .then(res => res.json())
           .then(userInfo => this.setState({userInfo}))
-          navigator.serviceWorker.addEventListener('message', event => {
-            console.warn('FromWorker', event.data.msg, event.data.url);
-          });
+          // navigator.serviceWorker.addEventListener('message', event => {
+          //   console.warn('FromWorker', event.data.msg, event.data.url);
+          // });
     }
     render() {
         const { userInfo } = this.state;
